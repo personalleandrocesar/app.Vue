@@ -1,0 +1,134 @@
+/* @import './base.css'; */
+@import './normalize.css';
+
+/* 
+body {
+  font-family: 'Philosopher', sans-serif;
+  line-height: 1.6;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: #fadb41;
+  transition: 0.4s;
+}
+
+
+
+@media (hover: hover) {
+  a:hover {
+    background-color: #fadb4160;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0 2rem;
+  }
+} */
+
+body {
+  font-family: 'Philosopher', sans-serif;
+  line-height: 1.6;
+}
+
+.anima {
+  animation-direction: top;
+  animation: opacityAnimation 1s;
+}
+
+@keyframes opacityAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes lightOnAnimation {
+  0% {
+    color: #095D62;
+  }
+
+  50% {
+    color: #fadb41;
+  }
+
+  100% {
+    color: #095D62;
+  }
+}
+
+.lightOnAnimationOne {
+  animation-direction: left;
+  animation: 2s infinite lightOnAnimation;
+  animation-delay: 8s;
+}
+
+.logoAnimationOne {
+  animation-direction: top;
+  animation: opacityAnimation 2s;
+}
+
+.logoAnimationTwo {
+  animation-direction: top;
+  animation: opacityAnimation 4s;
+}
+
+.logoAnimationTree {
+  animation-direction: top;
+  animation: opacityAnimation 6s;
+}
+
+.logoAnimationFour {
+  animation-direction: top;
+  animation: opacityAnimation 8s;
+}
+
+.logoAnimationFive {
+  animation: opacityAnimation 10s;
+}
+
+.logoAnimationSix {
+  animation-direction: top;
+  animation: opacityAnimation 12s;
+}
+
+.logoAnimationSeven {
+  animation-direction: top;
+  animation: opacityAnimation 12s;
+}
+
+.logoAnimationSevenTwo {
+  animation-direction: top;
+  animation: opacityAnimation 40s;
+}
+
+.lightOnAnimationSeven {
+  animation-direction: left;
+  animation: 3s infinite lightOnAnimation;
+  animation-delay: 5s;
+}
+
+.homeAnimation {
+  animation-direction: top;
+  animation: opacityAnimation 14s;
+}

@@ -52,9 +52,9 @@ methods: {
   },
   signup(){
     if(this.email === 'lea@gmail.com' & this.senha === '1234'){
-      this.$router.replace ('/leandro-cesar')
+      this.$router.replace ('/user/leandro-cesar')
     } if (this.email === 'cam@gmail.com' & this.senha === '1234') {
-      this.$router.replace('/camilla-dimas')
+      this.$router.replace('/user/camilla-dimas')
     }
   },
   scrollToTop() {

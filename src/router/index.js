@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Index from '../views/index.vue'
-import Home from '../views/home.vue'
+/* import Home from '../views/home.vue'*/
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
+  routes: 
+  [
     {
       path: '/login',
       redirect: '/',
@@ -24,25 +25,16 @@ const router = createRouter({
       component: () => import('../views/recuperar.vue')
     },
     {
-      path: '/:id',
-      name: 'home',
-      alias: '/:id',
-      component: Home,
-      meta: { requiresAuth: true },
+      path: '/user/:username/', 
+      name: 'feed', 
+      component: () => import('../components/feed.vue'),
+      children: 
+      [
+        { path: 'treino', component: () => import('../views/recuperar.vue')},
+        {path: 'avaliacao', component: () => import('../views/user/leandro-cesar/avaliacao/index.vue')}, 
+      ]
     },
-    {
-      path: '/:id/index',
-      name: 'indexCamillaDimas',
-      component: () => import('../views/camilla-dimas/index.vue'),
-      meta: { requiresAuth: true },
-    },
-    {
-      path: '/leandro',
-      name: 'Leandro Cesar',
-      component: () => import('../views/leandro-cesar/index.vue'),
-      meta: { requiresAuth: true },
-    }
-  ]
-})
+  ],
+  })
 
 export default router

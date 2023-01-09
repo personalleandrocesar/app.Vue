@@ -20,7 +20,7 @@ import LCLogoTree from '../components/LCLogoTree.vue'
     <br>
     <div class='forgot'>
     <input class='button-call' type="submit" value="Entrar" id="btn" @click="signup">
-    <RouterLink to="recuperar"><h5>Esqueci minha senha</h5></RouterLink>
+    <!-- <RouterLink to="recuperar"><h5>Esqueci minha senha</h5></RouterLink> -->
     </div>
     </form> 
     </div>
@@ -30,48 +30,61 @@ import LCLogoTree from '../components/LCLogoTree.vue'
 </template>
 <script>
 export default {
-  data() {
-    return {
-      email: '',
-      senha: '',
-    }
-  },
-  methods: {
-    signup(){
-      if(this.email === 'lea@gmail.com' & this.senha === '1234'){
-        this.$router.replace ('/leandro-cesar')
-      } if (this.email === 'cam@gmail.com' & this.senha === '1234') {
-        this.$router.replace('/camilla-dimas')
-      }
-    },
-    scrollToTop() {
-      window.scrollTo(0, 0);
-    }
-  },
-  head: {
-    title: 'Acesso restrito | leandrocesar.com',
-    htmlAttrs: {
-      lang: 'pt-br'
-    },
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Professor Leandro Cesar Ramos da Costa | Site para Conteúdos e Serviços => Personal Trainer | Consultoria Online e Presencial | Acupuntura | Atendimentos em Niterói e São Gonçalo - RJ' },
-      { hid: 'keywords', name: 'description', content: 'Personal trainer, Acupuntura, Consultoria' },
-      { name: 'format-detection', content: 'telephone=no' }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico' },
-      { rel: 'shortcut icon', type: 'image/x-icon', href: '/img/favicon.svg' },
-      { rel: 'apple-touch-icon', size: '180x180', href: '/img/apple-touch-icon.png' },
-      { rel: 'icon', type:'image/png', size: '32x32', href: '/img/favicon-32x32.png' },
-      { rel: 'icon', type:'image/png', size: '16x16', href: '/img/favicon-16x16.png' },
-      { rel: 'apple-touch-icon', size: '180x180', href: '/img/apple-touch-icon.png' },
-      { rel: 'mask-icon', href: '/img/safari-pinned-tab.svg', color: '#002937' }
-    ],
+data() {
+  return {
+    email: '',
+    senha: '',
   }
+},
+computed: {
+  username() {
+    // We will see what `params` is shortly
+    return this.$route.params.username
+  },
+},
+methods: {
+  goToDashboard() {
+    if (isAuthenticated) {
+      this.$router.push('/dashboard')
+    } else {
+      this.$router.push('/login')
+    }
+  },
+  signup(){
+    if(this.email === 'lea@gmail.com' & this.senha === '1234'){
+      this.$router.replace ('/leandro-cesar')
+    } if (this.email === 'cam@gmail.com' & this.senha === '1234') {
+      this.$router.replace('/camilla-dimas')
+    }
+  },
+  scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+},
+head: {
+  title: 'Acesso restrito | leandrocesar.com',
+  htmlAttrs: {
+    lang: 'pt-br'
+  },
+  meta: [
+    { charset: 'utf-8' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { hid: 'description', name: 'description', content: 'Professor Leandro Cesar Ramos da Costa | Site para Conteúdos e Serviços => Personal Trainer | Consultoria Online e Presencial | Acupuntura | Atendimentos em Niterói e São Gonçalo - RJ' },
+    { hid: 'keywords', name: 'description', content: 'Personal trainer, Acupuntura, Consultoria' },
+    { name: 'format-detection', content: 'telephone=no' }
+  ],
+  link: [
+    { rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico' },
+    { rel: 'shortcut icon', type: 'image/x-icon', href: '/img/favicon.svg' },
+    { rel: 'apple-touch-icon', size: '180x180', href: '/img/apple-touch-icon.png' },
+    { rel: 'icon', type:'image/png', size: '32x32', href: '/img/favicon-32x32.png' },
+    { rel: 'icon', type:'image/png', size: '16x16', href: '/img/favicon-16x16.png' },
+    { rel: 'apple-touch-icon', size: '180x180', href: '/img/apple-touch-icon.png' },
+    { rel: 'mask-icon', href: '/img/safari-pinned-tab.svg', color: '#002937' }
+  ],
 }
-  </script>
+}
+</script>
 <style scoped>
 .button-call{
   background: #fadb4190;

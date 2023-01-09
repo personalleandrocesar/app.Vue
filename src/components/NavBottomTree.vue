@@ -13,17 +13,21 @@ methods: {
 <template>
   <div>
     <div class="nav-bottom"> 
-    <RouterLink to='/' @click.native="scrollToTop()">
+    <RouterLink :to="`/user/:id/`" @click.native="scrollToTop()">
       <i class="fas fasi-nav fa-home"></i>
       <h5>INÍCIO</h5>
     </RouterLink>
-    <RouterLink to='/index' @click.native="scrollToTop()">
-      <i class="fa-solid fa-dumbbell"></i>
-      <h5>SÉRIES</h5>
+    <RouterLink :to="`/user/${id}/feed`" @click.native="scrollToTop()">
+      <i class="fa-solid fa-rss"></i>
+      <h5>FEED</h5>
     </RouterLink>
-    <RouterLink to='/blog' @click.native="scrollToTop()">
+    <RouterLink :to='`/user/${id}/treino`' @click.native="scrollToTop()">
+      <i class="fa-solid fa-dumbbell"></i>
+      <h5>TREINOS</h5>
+    </RouterLink>
+    <RouterLink :to="`/user/${id}/avaliacao`" @click.native="scrollToTop()">
       <i class="fa-solid fa-clipboard-check"></i>
-      <h5>AVALIAÇÕES</h5>
+      <h5>AVALIAÇÃO</h5>
     </RouterLink>
   </div>
   </div>
@@ -71,7 +75,7 @@ i {
   align-items: center;
   justify-content: center;
   align-self: center;
-  color: #888;
+  color: #095D62;
   font-size: .9em;
   margin: 10px 0 0px 0;
 }

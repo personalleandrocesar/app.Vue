@@ -5,13 +5,8 @@ import LCLogoFive from '../components/icons/LCLogoFive.vue'
 <template>
   <div>
     <div class='logo'>
-      <LCLogoFive/>
     
-    <span class='logoAnimationSeven'>
-      <h1 class='lightOnAnimationSeven'>professorleandrocesar.com</h1>
-    </span>
-    <span class='logoAnimationSevenTwo'>
-    <h3>Personal - Consultoria</h3><h3>Avaliação Física - Krav-maga</h3>
+    <span class='logoAnimationOne'>
     <h1>Bem-vindo(a) {{ $route.params.id }} !!</h1>
 
   </span>
@@ -62,7 +57,7 @@ export default {
 
 }
 .logo h1 {
-  margin-top: 0px ;
+  margin-top: 15px ;
 }
 
   body {
@@ -83,10 +78,6 @@ h1{
   font-size: 1.4em;
 }
 
-h1:hover{
-  color:#fadb41;
-
-}
 
 h3{
   color:#aaa;

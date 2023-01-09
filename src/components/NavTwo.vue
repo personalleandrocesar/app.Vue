@@ -2,7 +2,7 @@
     <div class='nav-two'>
         <div>
             <div>
-                <a @click="$router.go(-1)"><i class="fas main-l fa-arrow-left"></i></a>
+                <a @click="this.$router.go(-1)"><i class="fas main-l fa-arrow-left"></i></a>
             </div>
             <div>
                 <RouterLink to="/login"><i class="fa-solid fa-right-to-bracket"></i></RouterLink>

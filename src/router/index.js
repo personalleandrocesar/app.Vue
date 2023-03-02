@@ -7,13 +7,8 @@ const router = createRouter({
   routes: 
   [
     {
-      path: '/login',
-      redirect: '/',
-    },
-    {
       path: '/',
       name: 'login',
-      alias: '/login',
       component: Index
     },
     {
@@ -25,14 +20,15 @@ const router = createRouter({
       component: () => import('../views/recuperar.vue')
     },
     {
-      path: '/user/:username/', 
+      path: '/user/leandro-cesar', 
       name: 'feed', 
       component: () => import('../components/feed.vue'),
-      children: 
-      [
-        { path: 'treino', component: () => import('../views/recuperar.vue')},
-        {path: 'avaliacao', component: () => import('../views/user/leandro-cesar/avaliacao/index.vue')}, 
-      ]
+      meta: { requiresAuth: true },      
+      // children: 
+      // [
+      //   { path: 'treino', component: () => import('../views/recuperar.vue')},
+      //   {path: 'avaliacao', component: () => import('../views/user/leandro-cesar/avaliacao/index.vue')}, 
+      // ]
     },
   ],
   })

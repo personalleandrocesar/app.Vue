@@ -8,7 +8,7 @@ import LCLogoTree from '../components/LCLogoTree.vue'
   <div>
   <div class='logo'>
     <LCLogoTree/>
-    <h1>professorleandrocesar.com</h1>
+    <h1>app.leandrocesar.com</h1>
     <h3>Acesse sua conta</h3>
     <div>
     <form method="post">
@@ -36,20 +36,7 @@ data() {
     senha: '',
   }
 },
-computed: {
-  username() {
-    // We will see what `params` is shortly
-    return this.$route.params.username
-  },
-},
 methods: {
-  goToDashboard() {
-    if (isAuthenticated) {
-      this.$router.push('/dashboard')
-    } else {
-      this.$router.push('/login')
-    }
-  },
   signup(){
     if(this.email === 'lea@gmail.com' & this.senha === '1234'){
       this.$router.replace ('/user/leandro-cesar')
@@ -87,7 +74,7 @@ head: {
 </script>
 <style scoped>
 .button-call{
-  background: #fadb4190;
+  background: #fadb41;
   padding: 5px 17px;
   width: 80px;
   margin: -10px 0 0 -10px ;
@@ -140,8 +127,8 @@ input:hover {
 }
 
 #btn:hover {
-  background: #fadb4132;
-  color: #888;
+  background: #ffd500;
+  color: #fff;
 }
 
 .forgot {
@@ -176,25 +163,25 @@ iframe {
 }
 
 h1{
-  color:#aaa;
+  color:#fadb41;
   transition: all .3s linear;
   cursor: pointer;
   font-size: 1.5em;
 }
 
 h3{
-  color:#aaa;
+  color:#fff;
   transition: all .3s linear;
 }
 
 h4{
-  color:#aaa;
+  color:#fff;
   transition: all .3s linear;
   margin: 0 0 0 -10px;
 }
 
 h1:hover{
-  color:#fadb41;
+  text-decoration:underline 2px #fadb41;
 
 }
 

@@ -15,21 +15,8 @@ import NavOne from '../../components/NavOne.vue'
 </div>
 
     <!-- NavBottom -->
-<div class="nav-bottom">
-    <RouterLink to='/:id/' @click.native="scrollToTop()">
-        <i class="fas fasi-nav fa-home"></i>
-        <h5>INÍCIO</h5>
-    </RouterLink>
-    <RouterLink to='/:id/treino' @click.native="scrollToTop()">
-        <i class="fa-solid fa-dumbbell"></i>
-        <h5>SÉRIES</h5>
-    </RouterLink>
-    <RouterLink to='/:id/avaliacao' @click.native="scrollToTop()">
-        <i class="fa-solid fa-clipboard-check"></i>
-        <h5>AVALIAÇÕES</h5>
-    </RouterLink>
 </div>
-</div>
+
 </template>
 <script>
 export default {

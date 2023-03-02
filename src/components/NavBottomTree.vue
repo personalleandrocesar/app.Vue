@@ -13,19 +13,19 @@ methods: {
 <template>
   <div>
     <div class="nav-bottom"> 
-    <RouterLink :to="`/user/:id/`" @click.native="scrollToTop()">
+    <RouterLink to="/" @click.native="scrollToTop()">
       <i class="fas fasi-nav fa-home"></i>
       <h5>INÍCIO</h5>
     </RouterLink>
-    <RouterLink :to="`/user/${id}/feed`" @click.native="scrollToTop()">
+    <RouterLink to="/" @click.native="scrollToTop()">
       <i class="fa-solid fa-rss"></i>
       <h5>FEED</h5>
     </RouterLink>
-    <RouterLink :to='`/user/${id}/treino`' @click.native="scrollToTop()">
+    <RouterLink to='/' @click.native="scrollToTop()">
       <i class="fa-solid fa-dumbbell"></i>
       <h5>TREINOS</h5>
     </RouterLink>
-    <RouterLink :to="`/user/${id}/avaliacao`" @click.native="scrollToTop()">
+    <RouterLink to="/" @click.native="scrollToTop()">
       <i class="fa-solid fa-clipboard-check"></i>
       <h5>AVALIAÇÃO</h5>
     </RouterLink>
